@@ -1,23 +1,28 @@
 import ListGroup from "react-bootstrap/ListGroup";
+
 import "../css/Main.css";
 
-const Main = () => {
-  const DatosPersonales = {
-    Direccion: "Amador Lucero 70",
-    Edad: 33,
-    EstadoCivil: "Casado",
-    Hobby: "Futbol",
-  };
+const Main = (props) => {
+  console.log(props)
+  // const DatosPersonales = {
+    
+  //   Direccion: "Amador Lucero 70",
+  //   Edad: 33,
+  //   EstadoCivil: "Casado",
+  //   Hobby: "Futbol",
+  // };
 
-  const { Direccion, Edad, EstadoCivil, Hobby } = DatosPersonales;
+  // const { Direccion, Edad, EstadoCivil, Hobby } = DatosPersonales;
 
   return (
-    <div>
-      <ListGroup className="lista">
-        <ListGroup.Item disabled>Edad : {Edad}</ListGroup.Item>
-        <ListGroup.Item>Direccion : {Direccion}</ListGroup.Item>
-        <ListGroup.Item>EstadoCivil: {EstadoCivil}</ListGroup.Item>
-        <ListGroup.Item>Hobby: {Hobby}</ListGroup.Item>
+    <div className="lista">
+      <ListGroup className="grupo">
+      <ListGroup.Item >Apellido: {props.portfolio.apellido}</ListGroup.Item>
+      <ListGroup.Item >Nombre: {props.portfolio.nombre}</ListGroup.Item>
+        <ListGroup.Item >Edad: {props.portfolio.edad}</ListGroup.Item>
+        <ListGroup.Item>Direccion: {props.portfolio.direccion}</ListGroup.Item>
+        <ListGroup.Item>Estado Civil: {props.portfolio.estadoCivil}</ListGroup.Item>
+        <ListGroup.Item>Hobby: {props.portfolio.hobby}</ListGroup.Item>
       </ListGroup>
       <br />
       <h3 className="h3">Estudie Lenguajes como:</h3>
@@ -113,7 +118,10 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+        
+  
+  
   );
 };
 

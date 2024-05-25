@@ -1,22 +1,15 @@
 import exequiel from "../assets/exequiel.jpg";
 import "../css/Header.css"
 
-const Header = () => {
-
-    const Midatos = {
-      NomyApe: " Nuñez Walter Exequiel"
-    }
-
+const Header = (props) => {
+  console.log(props)
+  
   return (
     <div className="header">
-      <br />
-      <br />
-      <img src={exequiel} alt="" width={250} height={300} />
-      <br />
-      <br />
-      <h1>{Midatos.NomyApe}</h1>
-        <br />
-        <br />
+      <div className="logo">
+      <img src={exequiel} alt="" />
+      <h1 className="a">{props.portfolio.titulo}</h1>
+      </div>
     </div>
   )
 }
